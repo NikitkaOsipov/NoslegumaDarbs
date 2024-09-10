@@ -13,17 +13,21 @@
         <a href="contact.html">Contact</a>
     </header>
 
+    <hr>
+
     <main>
         <h1>Home</h2>
         <h2>Ļoti svarīgs darbs</h2>
         <p>Šeit ir svarīgs teksts par svarīgu tēmu.</p>
         <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/FPGDGYJXM56KI5CTHHDX3DN2WQ.jpg&w=1200" alt="important cat">
     </main>
-
+    
     <aside>
         <h2>Īss apraksts</h2>
         <p>Šeit ir īss apraksts par svarīgu tēmu.</p>
     </aside>
+
+    <hr>
 
     <footer>
         <p>Pamatinformācija</p>
@@ -31,3 +35,49 @@
     </footer>
 </body>
 </html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    aside {
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    img {
+        width: 300px;
+        height: auto;
+    }
+</style>
