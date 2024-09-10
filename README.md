@@ -13,3 +13,7 @@
 * komentēt un balsot par citu idejām. 
 
  
+## Programming languages
+* Backend: PHP
+* Frontend: HTML, CSS, JS
+* database: mySQL
