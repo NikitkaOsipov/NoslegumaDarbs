@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosleguma darbs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Nosleguma darbs</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <hr>
-
     <main>
-        <h1>Home</h2>
-        <h2>Ļoti svarīgs darbs</h2>
-        <p>Šeit ir svarīgs teksts par svarīgu tēmu.</p>
-        <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/FPGDGYJXM56KI5CTHHDX3DN2WQ.jpg&w=1200" alt="important cat">
+        <section>
+            <h2>Ļoti svarīgs darbs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni deleniti nobis, facilis numquam ex! Quas temporibus iusto harum inventore aliquam! Aperiam earum in sint quas, quam fugiat dignissimos repudiandae tempore exercitationem nobis, commodi magni magnam est vero, accusantium placeat sequi velit nam voluptatem quibusdam asperiores iusto rerum error! Eveniet, ut explicabo nobis debitis consectetur ratione praesentium sunt similique possimus quia beatae nemo est! Saepe neque illo, accusamus unde sapiente incidunt iusto quia voluptatem. Voluptas distinctio, optio debitis adipisci inventore facere officia? Tempora, iure a! Impedit, laudantium placeat quo repellat possimus illo eum consectetur alias fuga accusantium excepturi optio? Natus.</p>
+            <figure>
+                <img width=400px height=260px src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/FPGDGYJXM56KI5CTHHDX3DN2WQ.jpg&w=1200" alt="important cat">
+                <figcaption>Šis ir svarīgs kaķis</figcaption>
+            </figure>
+        </section>
+
+        <aside>
+            <h2>Īss apraksts</h2>
+            <p>Šeit ir īss apraksts par svarīgu tēmu. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quos, ut, quia cum dolorum incidunt explicabo corrupti dolores similique asperiores voluptate et nulla? Asperiores sit magnam beatae eos sapiente obcaecati.</p>
+        </aside>
     </main>
     
-    <aside>
-        <h2>Īss apraksts</h2>
-        <p>Šeit ir īss apraksts par svarīgu tēmu.</p>
-    </aside>
-
-    <hr>
+    
 
     <footer>
         <p>Pamatinformācija</p>
@@ -35,49 +40,3 @@
     </footer>
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
-
-    header a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    aside {
-        background-color: #f4f4f4;
-        padding: 20px;
-    }
-
-    footer {
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
-
-    img {
-        width: 300px;
-        height: auto;
-    }
-</style>
