@@ -1,10 +1,8 @@
-// Function to open modal
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
     }
     
-    // Function to close modal
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "none";
@@ -33,12 +31,10 @@ btn.onclick = function() {
 }
 
   
-  // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
   
-  // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -47,7 +43,6 @@ window.onclick = function(event) {
 
 var closeSpans = document.querySelectorAll('.close');
     
-    // Attach click event to each <span> for closing modals
     closeSpans.forEach(function(span) {
         span.onclick = function() {
         var modalId = span.getAttribute('data-modal');
@@ -55,60 +50,33 @@ var closeSpans = document.querySelectorAll('.close');
     }
 });
 
- // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal(event.target.id);
     }
 }
 
-// // Function to open modal
-// function openModal(modalId) {
-//     var modal = document.getElementById(modalId);
-//     modal.style.display = "block";
-//     }
-    
-//     // Function to close modal
-//     function closeModal(modalId) {
-//     var modal = document.getElementById(modalId);
-//     modal.style.display = "none";
-//     }
-    
-//     // Attach click event to Evo 8 button
-//     document.getElementById('learnMoreBtnEvo').onclick = function() {
-//     openModal('myModalEvo8'); // Make sure this targets the correct modal
-//     }
-    
-    
-//     // Attach click event to R6 button
-//     document.getElementById('learnMoreBtnR6').onclick = function() {
-//     openModal('myModalR6');
-//     }
-    
-    
-//     // Attach click event to R6 button
-//     document.getElementById('learnMoreBtnHouse').onclick = function() {
-//     openModal('myModalHouse');
-//     }
-    
-//     // Get all <span> elements that close modals
-//     var closeSpans = document.querySelectorAll('.close');
-    
-//     // Attach click event to each <span> for closing modals
-//     closeSpans.forEach(function(span) {
-//     span.onclick = function() {
-//     var modalId = span.getAttribute('data-modal');
-//     closeModal(modalId);
-//     }
-//     });
-    
-//     // When the user clicks anywhere outside of the modal, close it
-//     window.onclick = function(event) {
-//     if (event.target.classList.contains('modal')) {
-//     closeModal(event.target.id);
-//     }
-//     }
-    
-//     function myFunction() {
-//     var element = document.body;
-//     element.classList.toggle("dark-mode");
+
+function menuFunction() {
+    var x = document.getElementById("dropMenu");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    const root = document.documentElement;
+
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        root.style.setProperty('--light-color', '#000'); 
+        root.style.setProperty('--dark-color', '#364943'); 
+    } else {
+        root.style.setProperty('--light-color', '#f5f5f5'); 
+        root.style.setProperty('--dark-color', '#1E293B'); 
+    }
+}
