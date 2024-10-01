@@ -507,18 +507,3 @@ body.dark-mode {
         position: relative;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--dark-color);
-        background-image: radial-gradient(#706a0e, #0d387c);
-    }
-
-    img {
-        filter: invert(1);
-    }
-
-    main {
-        color: #fff;
-    }
-}

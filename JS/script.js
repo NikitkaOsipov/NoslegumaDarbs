@@ -1,3 +1,5 @@
+// Modals
+
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
@@ -57,6 +59,7 @@ window.onclick = function(event) {
 }
 
 
+// Drop down menu
 function menuFunction() {
     var x = document.getElementById("dropMenu");
     if (x.style.display === "block") {
@@ -66,6 +69,7 @@ function menuFunction() {
     }
 }
 
+// Dark mode
 function toggleDarkMode() {
     const body = document.body;
     const root = document.documentElement;
