@@ -77,7 +77,7 @@ function toggleDarkMode() {
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-        root.style.setProperty('--light-color', '#000'); 
+        root.style.setProperty('--light-color', '#bdbdbd'); 
         root.style.setProperty('--dark-color', '#364943'); 
     } else {
         root.style.setProperty('--light-color', '#f5f5f5'); 

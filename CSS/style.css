@@ -95,6 +95,7 @@ main section {
     gap: 1rem;
     width: calc(70% - 5px);
     align-items: center;
+    color: var(--light-color);
 }
 
 main aside {
@@ -426,13 +427,14 @@ p {
 
 body.dark-mode {
     background-color: #1E293B;
-    background-image: radial-gradient(#706a0e, #0d387c);
+    background-image: radial-gradient(#0d387c, #210622);
 }
 
 body.dark-mode .modalBtn {
     background-color: #1E293B;
     color: #f5f5f5;
 }
+
 /* https://www.youtube.com/watch?v=S-T9XoCMwt4&ab_channel=RedStapler */
 
 /* ANIMATIONS */
