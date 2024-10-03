@@ -136,6 +136,7 @@ p {
 /* CARD STYLES */
 .cards_container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 1rem;
     width: 100%;
@@ -179,6 +180,7 @@ p {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     transition: 0.2s linear;
+    border-radius: 5px;
 }
 
 .modalBtn:hover {
@@ -228,7 +230,7 @@ p {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #009245;
+    color: #009245;
 }
 
 /* MODAL */
@@ -425,6 +427,11 @@ p {
 body.dark-mode {
     background-color: #1E293B;
     background-image: radial-gradient(#706a0e, #0d387c);
+}
+
+body.dark-mode .modalBtn {
+    background-color: #1E293B;
+    color: #f5f5f5;
 }
 /* https://www.youtube.com/watch?v=S-T9XoCMwt4&ab_channel=RedStapler */
 
