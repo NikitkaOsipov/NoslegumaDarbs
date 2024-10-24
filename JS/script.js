@@ -3,24 +3,40 @@
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
-    }
+}
     
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "none";
 }
 
-document.getElementById('modalBtnPolite').onclick = function() {
-    openModal('modalPolite'); 
-}
+// var modalPoliteBtn = document.getElementById('modalBtnPolite');
 
-document.getElementById('modalBtnCry').onclick = function() {
+// var modalCryBtn = document.getElementById('modalBtnCry').onclick = function() {
+//     openModal('modalCry'); 
+// }
+
+// document.getElementById('modalBtnWar').onclick = function() {
+//     openModal('modalWar'); 
+// }
+
+// var modalPoliteBtn = document.getElementById('modalBtnPolite');
+
+var modalCryBtn = document.getElementById('modalBtnCry');
+
+var modalWarBtn = document.getElementById('modalBtnWar');
+
+// modalPoliteBtn.onclick = function() {
+//     openModal('modalPolite'); 
+// }
+modalCryBtn.onclick = function() {
     openModal('modalCry'); 
 }
-
-document.getElementById('modalBtnWar').onclick = function() {
+modalWarBtn.onclick = function() {
     openModal('modalWar'); 
 }
+
+
 var modal = document.getElementsByClassName("modal");
 
 var btn = document.getElementsByClassName("modalBtn");
@@ -29,7 +45,9 @@ var span = document.getElementsByClassName("close");
 
 
 btn.onclick = function() {
-    modal.style.display = "block";
+    var modalId = btn.getAttribute('data-modal');
+    console.log(modalId);
+    openModal(modalId);
 }
 
   
@@ -45,8 +63,8 @@ window.onclick = function(event) {
 
 var closeSpans = document.querySelectorAll('.close');
     
-    closeSpans.forEach(function(span) {
-        span.onclick = function() {
+closeSpans.forEach(function(span) {
+    span.onclick = function() {
         var modalId = span.getAttribute('data-modal');
         closeModal(modalId);
     }
@@ -84,3 +102,20 @@ function toggleDarkMode() {
         root.style.setProperty('--dark-color', '#1E293B'); 
     }
 }
+
+// Include HEADER
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('includes/header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('header file not found');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector('header').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Header not loaded:', error);
+    });
+}); 

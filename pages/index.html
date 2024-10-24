@@ -4,51 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosleguma darbs</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="phone-menu">
-            <section class="header-title-line">
-                <h1>Nosleguma darbs</h1>
-                <button class="menu-button" onclick="menuFunction()">
-                    <div class="menu-icon"></div>
-                </button>
-            </section>
-        
-            <nav id="dropMenu">
-                <ul>
-                    <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
-                    <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a></li>
-                    <li><a href="contact.html">Servise 1</a></li>
-                    <li><a href="contact.html">Servise 2</a></li>
-                    <li><a href="contact.html">Servise 3</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        
-        <div class="pc-screen-menu">
-            <h1>Nosleguma darbs</h1>
-            <nav>
-                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
-                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
-                <div class="dropdown">
-                    <button class="dropbtn"><i class="fa-solid fa-bell-concierge"></i> Servises</button>
-    
-                    <div class="dropdown-content">
-                        <a href="contact.html">Servise 1</a>
-                        <a href="contact.html">Servise 2</a>
-                        <a href="contact.html">Servise 3</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        
-    </header>
+    <header></header>
 
     <main>
         <section>
@@ -67,7 +27,7 @@
                     <h2>Polite Cat Meme</h2>
                     <p>Polite Cat is a meme that features a cat that is very polite. The cat is often depicted in a bowtie and is known for its polite demeanor.</p>
 
-                    <button id="modalBtnPolite" class="modalBtn">Learn More</button>
+                    <button id="modalBtnPolite" class="modalBtn" data-modal="modalPolite">Learn More</button>
 
                 </article>
             
@@ -77,7 +37,7 @@
                     </figure>
                     <h2>Crying Cat Meme</h2>
                     <p>Crying Cat is a meme that features a cat with a very sad expression. The cat is often depicted with tears streaming down its face and is used to convey a sense of sadness or grief.</p>
-                    <button id="modalBtnCry" class="modalBtn">Learn More</button>
+                    <button id="modalBtnCry" class="modalBtn" data-modal="modalPolite">Learn More</button>
                 </article>
             
                 <article class="card" >
@@ -86,7 +46,7 @@
                     </figure>
                     <h2>War Cat Meme</h2>
                     <p>War Cat is a meme that features a cat that is ready for battle. The cat is often depicted in armor and is known for its fierce expression.</p>
-                    <button id="modalBtnWar" class="modalBtn">Learn More</button>
+                    <button id="modalBtnWar" class="modalBtn" data-modal="modalPolite">Learn More</button>
                 </article>
             </div>
         </section>
@@ -135,6 +95,7 @@
         </div>
     </div>
 
-    <script src="JS/script.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    <script src="../JS/includes.js" defer></script>
 </body>
 </html>
