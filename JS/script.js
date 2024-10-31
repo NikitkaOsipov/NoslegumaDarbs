@@ -9,73 +9,29 @@ function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "none";
 }
-
-// var modalPoliteBtn = document.getElementById('modalBtnPolite');
-
-// var modalCryBtn = document.getElementById('modalBtnCry').onclick = function() {
-//     openModal('modalCry'); 
-// }
-
-// document.getElementById('modalBtnWar').onclick = function() {
-//     openModal('modalWar'); 
-// }
-
-// var modalPoliteBtn = document.getElementById('modalBtnPolite');
-
-var modalCryBtn = document.getElementById('modalBtnCry');
-
-var modalWarBtn = document.getElementById('modalBtnWar');
-
-// modalPoliteBtn.onclick = function() {
-//     openModal('modalPolite'); 
-// }
-modalCryBtn.onclick = function() {
-    openModal('modalCry'); 
-}
-modalWarBtn.onclick = function() {
-    openModal('modalWar'); 
-}
-
-
-var modal = document.getElementsByClassName("modal");
-
-var btn = document.getElementsByClassName("modalBtn");
-
-var span = document.getElementsByClassName("close");
-
-
-btn.onclick = function() {
-    var modalId = btn.getAttribute('data-modal');
-    console.log(modalId);
-    openModal(modalId);
-}
-
-  
-span.onclick = function() {
-    modal.style.display = "none";
-}
-  
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-var closeSpans = document.querySelectorAll('.close');
     
+var btns = document.getElementsByClassName("modalBtn"); // Get the button that opens the modal
+Array.from(btns).forEach(function(btn) {
+    btn.onclick = function() {
+        var modalId = btn.getAttribute('data-modal');
+        openModal(modalId);
+    }
+});
+    
+var closeSpans = document.querySelectorAll('.close'); // Get the <span> element that closes the modal
 closeSpans.forEach(function(span) {
     span.onclick = function() {
         var modalId = span.getAttribute('data-modal');
         closeModal(modalId);
     }
 });
-
+    
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal(event.target.id);
     }
 }
-
+    
 
 // Drop down menu
 function menuFunction() {
@@ -117,5 +73,19 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => {
             console.error('Header not loaded:', error);
+    });
+    
+    fetch('includes/footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('footer file not found');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector('footer').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Footer not loaded:', error);
     });
 }); 
